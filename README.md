@@ -1,4 +1,4 @@
-## Olá, eu sou o Fabiano Filho, graduando em Engenharia de Software
+## Olá, eu sou o Fabiano Filho, estudante de Engenharia de Software
 
 <div>
   <a href="https://github.com/fabiano-filho">
