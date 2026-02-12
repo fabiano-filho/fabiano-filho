@@ -43,19 +43,24 @@
 
 ## TECH STACK
 
-<div align="center">
-  <img align="center" alt="python" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
-  <img align="center" alt="javascript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
-  <img align="center" alt="html" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"/>
-  <img align="center" alt="css" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"/>
-  <img align="center" alt="java" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
-  <img align="center" alt="git" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
-  <img align="center" alt="vue" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"/>
-  <img align="center" alt="django" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"/>
-  <img align="center" alt="selenium" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"/>
-  <img align="center" alt="pandas" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/>
-  <img align="center" alt="sqlserver" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"/>
-</div>
+<!-- tech:start -->
+### Auto Stack (Top 10)
+
+_Mode: public repos only | Repos analyzed: 30_
+
+| Rank | Language | Share |
+|---|---|---|
+| 1 | HTML | 22.9% |
+| 2 | JavaScript | 17.0% |
+| 3 | Python | 15.6% |
+| 4 | TypeScript | 14.7% |
+| 5 | CSS | 13.2% |
+| 6 | C | 7.4% |
+| 7 | TSQL | 4.0% |
+| 8 | Java | 3.0% |
+| 9 | PHP | 0.9% |
+| 10 | Vue | 0.7% |
+<!-- tech:end -->
 
 ## CONTRIBUTION MATRIX
 

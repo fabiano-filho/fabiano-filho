@@ -33,6 +33,8 @@ jobs:
       - name: Generate telemetry block + badges
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TURBO_README_TOKEN: ${{ secrets.TURBO_README_TOKEN }}
+          TURBO_STACK_TOP: "10"
         run: node .github/scripts/turbo-readme.mjs
 
       - name: Commit changes when needed
