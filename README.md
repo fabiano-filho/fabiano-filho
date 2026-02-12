@@ -30,18 +30,18 @@
 | Followers / Following | **29 / 33** |
 | Stars received | **2** |
 | Forks received | **0** |
-| Contributions (last year) | N/A (GraphQL token required) |
-| Commit contributions (last year) | N/A (GraphQL token required) |
-| Streak (current / best) | N/A (GraphQL token required) |
+| Contributions (last year) | **309** |
+| Commit contributions (last year) | **62** |
+| Streak (current / best) | **4 / 7 days** |
 
 #### Last Public Activity
+- `2026-02-12` Push em [`fabiano-filho/fabiano-filho`](https://github.com/fabiano-filho/fabiano-filho)
 - `2026-02-12` Push em [`fabiano-filho/fabiano-filho`](https://github.com/fabiano-filho/fabiano-filho)
 - `2026-02-10` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-10` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 - `2026-02-06` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-05` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 - `2026-02-05` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
-- `2026-02-03` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 
 #### Language Footprint
 - Python: 9 repos
