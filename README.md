@@ -48,18 +48,20 @@
 
 _Mode: public repos only | Repos analyzed: 30_
 
-| Rank | Language | Share |
-|---|---|---|
-| 1 | HTML | 22.9% |
-| 2 | JavaScript | 17.0% |
-| 3 | Python | 15.6% |
-| 4 | TypeScript | 14.7% |
-| 5 | CSS | 13.2% |
-| 6 | C | 7.4% |
-| 7 | TSQL | 4.0% |
-| 8 | Java | 3.0% |
-| 9 | PHP | 0.9% |
-| 10 | Vue | 0.7% |
+<div align="center">
+  <img align="center" alt="HTML" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" title="#1 HTML - 22.9%"/>
+  <img align="center" alt="JavaScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="#2 JavaScript - 17.0%"/>
+  <img align="center" alt="Python" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="#3 Python - 15.6%"/>
+  <img align="center" alt="TypeScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" title="#4 TypeScript - 14.7%"/>
+  <img align="center" alt="CSS" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" title="#5 CSS - 13.2%"/>
+  <img align="center" alt="C" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="#6 C - 7.4%"/>
+  <img align="center" alt="TSQL" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" title="#7 TSQL - 4.0%"/>
+  <img align="center" alt="Java" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="#8 Java - 3.0%"/>
+  <img align="center" alt="PHP" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" title="#9 PHP - 0.9%"/>
+  <img align="center" alt="Vue" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" title="#10 Vue - 0.7%"/>
+</div>
+
+<sub>1) HTML 22.9% | 2) JavaScript 17.0% | 3) Python 15.6% | 4) TypeScript 14.7% | 5) CSS 13.2% | 6) C 7.4% | 7) TSQL 4.0% | 8) Java 3.0% | 9) PHP 0.9% | 10) Vue 0.7%</sub>
 <!-- tech:end -->
 
 ## CONTRIBUTION MATRIX

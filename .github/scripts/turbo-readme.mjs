@@ -25,6 +25,28 @@ const restHeaders = {
   "User-Agent": "turbo-readme-generator"
 };
 
+const DEVICON_URLS = {
+  "c": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+  "c++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+  "c#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  "css": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+  "dart": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
+  "django": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  "go": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+  "graphql": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+  "html": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+  "java": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  "javascript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "kotlin": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+  "php": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  "python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "rust": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+  "sql": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "tsql": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+  "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "vue": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+};
+
 if (token) {
   restHeaders.Authorization = `Bearer ${token}`;
 }
@@ -392,6 +414,41 @@ function buildLanguageRanking(totals, limit) {
   });
 }
 
+function normalizeLanguageKey(name) {
+  return String(name || "")
+    .toLowerCase()
+    .replace(/\s+/g, "")
+    .replace("objective-c", "objectivec")
+    .replace("c++", "c++")
+    .replace("c#", "c#");
+}
+
+function iconForLanguage(name) {
+  const normalized = normalizeLanguageKey(name);
+  if (DEVICON_URLS[normalized]) {
+    return DEVICON_URLS[normalized];
+  }
+
+  if (normalized.includes("sql")) {
+    return DEVICON_URLS.tsql;
+  }
+
+  return "";
+}
+
+function languageIconTag(item) {
+  const src = iconForLanguage(item.name);
+  const title = `#${item.rank} ${item.name} - ${item.shareLabel}`;
+
+  if (src) {
+    return `<img align="center" alt="${item.name}" height="34" width="44" src="${src}" title="${title}"/>`;
+  }
+
+  const label = encodeURIComponent(item.name);
+  const share = encodeURIComponent(item.shareLabel);
+  return `<img alt="${item.name}" src="https://img.shields.io/badge/${label}-${share}-0f172a?style=flat-square" title="${title}"/>`;
+}
+
 function buildTechStackBlock({ languageRanking, visibilityMode, reposCount, topLimit }) {
   const modeLabel =
     visibilityMode === "authenticated"
@@ -413,9 +470,11 @@ function buildTechStackBlock({ languageRanking, visibilityMode, reposCount, topL
     "",
     `_Mode: ${modeLabel} | Repos analyzed: ${reposCount}_`,
     "",
-    "| Rank | Language | Share |",
-    "|---|---|---|",
-    ...languageRanking.map((item) => `| ${item.rank} | ${item.name} | ${item.shareLabel} |`)
+    "<div align=\"center\">",
+    `  ${languageRanking.map((item) => languageIconTag(item)).join("\n  ")}`,
+    "</div>",
+    "",
+    `<sub>${languageRanking.map((item) => `${item.rank}) ${item.name} ${item.shareLabel}`).join(" | ")}</sub>`
   ].join("\n");
 }
 
