@@ -5,6 +5,7 @@ const START_MARKER = "<!-- turbo:start -->";
 const END_MARKER = "<!-- turbo:end -->";
 const README_PATH = "README.md";
 const METRICS_DIR = path.join("assets", "metrics");
+const SIGNALS_DIR = path.join("assets", "signals");
 const MAX_REPO_PAGES = 5;
 
 const repository = process.env.GITHUB_REPOSITORY || "fabiano-filho/fabiano-filho";
@@ -70,6 +71,97 @@ async function writeJson(fileName, payload) {
   await fs.writeFile(fullPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
 }
 
+function escapeXml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+function signalCardSvg({ title, accent, rows, footer }) {
+  const safeTitle = escapeXml(title);
+  const safeFooter = escapeXml(footer);
+  const renderedRows = rows
+    .slice(0, 4)
+    .map((row, index) => {
+      const y = 72 + index * 24;
+      return `<text x="28" y="${y}" fill="#e2e8f0" font-size="15" font-family="Consolas, 'Courier New', monospace">${escapeXml(row)}</text>`;
+    })
+    .join("");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="180" viewBox="0 0 560 180" role="img" aria-label="${safeTitle}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#152238"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="${accent}"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="560" height="180" fill="url(#bg)" rx="18"/>
+  <rect x="0" y="0" width="560" height="8" fill="url(#accent)" rx="18"/>
+  <text x="28" y="42" fill="#7dd3fc" font-size="22" font-weight="700" font-family="Consolas, 'Courier New', monospace">${safeTitle}</text>
+  ${renderedRows}
+  <text x="28" y="162" fill="#94a3b8" font-size="13" font-family="Consolas, 'Courier New', monospace">${safeFooter}</text>
+</svg>
+`;
+}
+
+async function writeSignalCards({
+  user,
+  repos,
+  totalStars,
+  totalForks,
+  events,
+  languages,
+  contributionsCell,
+  streakCell
+}) {
+  const lastEventDate = events.length ? formatDate(events[0]?.created_at) : "none";
+  const followers = user?.followers ?? 0;
+  const following = user?.following ?? 0;
+  const topLanguages = languages.length
+    ? languages
+        .slice(0, 3)
+        .map((item) => `${item.name}(${item.count})`)
+        .join(" | ")
+    : "No language data";
+
+  const velocityCard = signalCardSvg({
+    title: "SIGNAL // Velocity",
+    accent: "#0ea5e9",
+    rows: [
+      `Repos: ${repos.length}`,
+      `Stars: ${totalStars} | Forks: ${totalForks}`,
+      `Followers: ${followers} | Following: ${following}`,
+      `Last event: ${lastEventDate}`
+    ],
+    footer: "Source: GitHub REST API"
+  });
+
+  const stackCard = signalCardSvg({
+    title: "SIGNAL // Stack",
+    accent: "#14b8a6",
+    rows: [
+      `Top langs: ${topLanguages}`,
+      `Contribs(12m): ${contributionsCell}`,
+      `Streak: ${streakCell}`,
+      `Focus: ${sanitizeText(topLanguages, 48)}`
+    ],
+    footer: "Source: GitHub REST + GraphQL"
+  });
+
+  await Promise.all([
+    fs.writeFile(path.join(SIGNALS_DIR, "velocity.svg"), velocityCard, "utf8"),
+    fs.writeFile(path.join(SIGNALS_DIR, "stack.svg"), stackCard, "utf8")
+  ]);
+}
+
 async function fetchJson(url, options = {}, optional = false) {
   const response = await fetch(url, {
     ...options,
@@ -129,20 +221,6 @@ async function fetchGraphQL(login) {
                 contributionCount
                 date
               }
-            }
-          }
-        }
-        pinnedItems(first: 6, types: REPOSITORY) {
-          nodes {
-            ... on Repository {
-              name
-              description
-              url
-              stargazerCount
-              primaryLanguage {
-                name
-              }
-              pushedAt
             }
           }
         }
@@ -271,19 +349,6 @@ function buildDynamicBlock({
     graphqlData?.user?.contributionsCollection?.totalCommitContributions || 0;
 
   const hasGraphql = Boolean(graphqlData?.user?.contributionsCollection);
-  const pinned = graphqlData?.user?.pinnedItems?.nodes || [];
-
-  const pinnedLines = pinned.length
-    ? pinned
-        .map((item) => {
-          const description = sanitizeText(item.description || "Sem descricao", 95);
-          const language = item.primaryLanguage?.name || "N/A";
-          return `- [\`${item.name}\`](${item.url}) - ${description} | ${language} | ${item.stargazerCount} stars | update ${formatDate(item.pushedAt)}`;
-        })
-        .join("\n")
-    : hasGraphql
-      ? "- Sem pinned repos retornados no momento (defina repos fixados no perfil para ativar esta area)."
-      : "- Pinned projects indisponivel localmente sem GraphQL token. No GitHub Actions isso sera preenchido.";
 
   const recentActivity = events.length
     ? events.slice(0, 7).map(mapEvent).join("\n")
@@ -318,9 +383,6 @@ function buildDynamicBlock({
     `| Commit contributions (last year) | ${commitsCell} |`,
     `| Streak (current / best) | ${streakCell} |`,
     "",
-    "#### Pinned Projects",
-    pinnedLines,
-    "",
     "#### Last Public Activity",
     recentActivity,
     "",
@@ -333,6 +395,7 @@ function buildDynamicBlock({
 
 async function main() {
   await fs.mkdir(METRICS_DIR, { recursive: true });
+  await fs.mkdir(SIGNALS_DIR, { recursive: true });
 
   const [user, repos, events, graphqlData] = await Promise.all([
     fetchJson(`https://api.github.com/users/${username}`, {}, true),
@@ -384,9 +447,15 @@ async function main() {
   await fs.writeFile(README_PATH, updatedReadme, "utf8");
 
   const hasGraphql = Boolean(graphqlData?.user?.contributionsCollection);
+  const contributionCount =
+    graphqlData?.user?.contributionsCollection?.contributionCalendar?.totalContributions || 0;
   const focusLabel = languages.length
     ? sanitizeText(languages.slice(0, 3).map((item) => item.name).join(" + "), 28)
     : "mixed stack";
+  const contributionsSignal = hasGraphql ? `${contributionCount}` : "GraphQL pending";
+  const streakSignal = hasGraphql
+    ? `${streak.current}d now | ${streak.best}d best`
+    : "GraphQL pending";
 
   const lastEventDate = events.length ? formatDate(events[0].created_at) : "none";
 
@@ -399,12 +468,22 @@ async function main() {
       "streak.json",
       toEndpointBadge(
         "Streak",
-        hasGraphql ? `${streak.current}d now | ${streak.best}d best` : "GraphQL pending",
+        streakSignal,
         "06b6d4"
       )
     ),
     writeJson("focus.json", toEndpointBadge("Focus", focusLabel, "0284c7")),
-    writeJson("radar.json", toEndpointBadge("Radar", `last event ${lastEventDate}`, "0f766e"))
+    writeJson("radar.json", toEndpointBadge("Radar", `last event ${lastEventDate}`, "0f766e")),
+    writeSignalCards({
+      user: safeUser,
+      repos,
+      totalStars,
+      totalForks,
+      events,
+      languages,
+      contributionsCell: contributionsSignal,
+      streakCell: streakSignal
+    })
   ]);
 
   const rateLimit = graphqlData?.rateLimit;

@@ -30,15 +30,9 @@
 | Followers / Following | **29 / 33** |
 | Stars received | **2** |
 | Forks received | **0** |
-| Contributions (last year) | **307** |
-| Commit contributions (last year) | **60** |
-| Streak (current / best) | **4 / 7 days** |
-
-#### Pinned Projects
-- [`retech`](https://github.com/fabiano-filho/retech) - Sistema desenvolvido em Django - Retech | HTML | 1 stars | update 2022-09-16
-- [`todo-list-vuejs`](https://github.com/fabiano-filho/todo-list-vuejs) - Todo list simples desenvolvido em Vue js | Vue | 0 stars | update 2022-06-19
-- [`localStorage`](https://github.com/fabiano-filho/localStorage) - Funções para ler, excluir e adicionar utilizando o LocalStorage | JavaScript | 0 stars | update 2022-05-30
-- [`linguagem-markdown`](https://github.com/fabiano-filho/linguagem-markdown) - Notas sobre a linguagem Markdown | N/A | 0 stars | update 2021-04-06
+| Contributions (last year) | N/A (GraphQL token required) |
+| Commit contributions (last year) | N/A (GraphQL token required) |
+| Streak (current / best) | N/A (GraphQL token required) |
 
 #### Last Public Activity
 - `2026-02-12` Push em [`fabiano-filho/fabiano-filho`](https://github.com/fabiano-filho/fabiano-filho)
@@ -79,8 +73,8 @@
 ## SIGNALS
 
 <p align="center">
-  <img height="175" src="https://github-readme-stats.vercel.app/api?username=fabiano-filho&show_icons=true&hide_border=true&bg_color=00000000&title_color=22d3ee&text_color=e2e8f0&icon_color=06b6d4&rank_icon=github" alt="stats"/>
-  <img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fabiano-filho&layout=compact&hide_border=true&bg_color=00000000&title_color=22d3ee&text_color=e2e8f0" alt="top-langs"/>
+  <img width="49%" src="https://raw.githubusercontent.com/fabiano-filho/fabiano-filho/main/assets/signals/velocity.svg" alt="velocity-signal"/>
+  <img width="49%" src="https://raw.githubusercontent.com/fabiano-filho/fabiano-filho/main/assets/signals/stack.svg" alt="stack-signal"/>
 </p>
 
 ## AUTOMATION ENGINE
@@ -88,7 +82,7 @@
 This profile is powered by:
 
 - GitHub REST API (`users`, `repos`, `events/public`)
-- GitHub GraphQL API (`contributionsCollection`, `pinnedItems`, `rateLimit`)
+- GitHub GraphQL API (`contributionsCollection`, `rateLimit`)
 - GitHub Actions (`turbo-readme.yml`) for automatic refresh
 - Shields Endpoint API using JSON files generated inside this repository
 

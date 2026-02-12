@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="180" viewBox="0 0 560 180" role="img" aria-label="SIGNAL // Stack">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#152238"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="560" height="180" fill="url(#bg)" rx="18"/>
+  <rect x="0" y="0" width="560" height="8" fill="url(#accent)" rx="18"/>
+  <text x="28" y="42" fill="#7dd3fc" font-size="22" font-weight="700" font-family="Consolas, 'Courier New', monospace">SIGNAL // Stack</text>
+  <text x="28" y="72" fill="#e2e8f0" font-size="15" font-family="Consolas, 'Courier New', monospace">Top langs: Python(9) | HTML(3) | JavaScript(2)</text><text x="28" y="96" fill="#e2e8f0" font-size="15" font-family="Consolas, 'Courier New', monospace">Contribs(12m): GraphQL pending</text><text x="28" y="120" fill="#e2e8f0" font-size="15" font-family="Consolas, 'Courier New', monospace">Streak: GraphQL pending</text><text x="28" y="144" fill="#e2e8f0" font-size="15" font-family="Consolas, 'Courier New', monospace">Focus: Python(9) / HTML(3) / JavaScript(2)</text>
+  <text x="28" y="162" fill="#94a3b8" font-size="13" font-family="Consolas, 'Courier New', monospace">Source: GitHub REST + GraphQL</text>
+</svg>
