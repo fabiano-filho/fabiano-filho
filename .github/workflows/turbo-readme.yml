@@ -1,0 +1,48 @@
+name: Turbo README
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - .github/scripts/turbo-readme.mjs
+      - .github/workflows/turbo-readme.yml
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Refresh dynamic README panel
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate telemetry block + badges
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/turbo-readme.mjs
+
+      - name: Commit changes when needed
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md assets/metrics/*.json
+            git commit -m "chore(readme): refresh turbo telemetry"
+            git push
+          else
+            echo "No changes to commit"
+          fi
