@@ -30,21 +30,24 @@
 | Followers / Following | **29 / 33** |
 | Stars received | **2** |
 | Forks received | **0** |
-| Contributions (last year) | N/A (GraphQL token required) |
-| Commit contributions (last year) | N/A (GraphQL token required) |
-| Streak (current / best) | N/A (GraphQL token required) |
+| Contributions (last year) | **307** |
+| Commit contributions (last year) | **60** |
+| Streak (current / best) | **4 / 7 days** |
 
 #### Pinned Projects
-- Pinned projects indisponivel localmente sem GraphQL token. No GitHub Actions isso sera preenchido.
+- [`retech`](https://github.com/fabiano-filho/retech) - Sistema desenvolvido em Django - Retech | HTML | 1 stars | update 2022-09-16
+- [`todo-list-vuejs`](https://github.com/fabiano-filho/todo-list-vuejs) - Todo list simples desenvolvido em Vue js | Vue | 0 stars | update 2022-06-19
+- [`localStorage`](https://github.com/fabiano-filho/localStorage) - Funções para ler, excluir e adicionar utilizando o LocalStorage | JavaScript | 0 stars | update 2022-05-30
+- [`linguagem-markdown`](https://github.com/fabiano-filho/linguagem-markdown) - Notas sobre a linguagem Markdown | N/A | 0 stars | update 2021-04-06
 
 #### Last Public Activity
+- `2026-02-12` Push em [`fabiano-filho/fabiano-filho`](https://github.com/fabiano-filho/fabiano-filho)
 - `2026-02-10` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-10` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 - `2026-02-06` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-05` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 - `2026-02-05` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-03` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
-- `2026-02-03` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 
 #### Language Footprint
 - Python: 9 repos
