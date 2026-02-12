@@ -332,62 +332,33 @@ function mapEvent(event) {
   return `- \`${date}\` ${message}`;
 }
 
-function buildDynamicBlock({
-  user,
-  repos,
-  events,
-  graphqlData,
-  totalStars,
-  totalForks,
-  languages,
-  streak
-}) {
-  const contributions =
-    graphqlData?.user?.contributionsCollection?.contributionCalendar?.totalContributions || 0;
+function buildDynamicBlock({ events }) {
+  const uniqueActivity = [];
+  const seen = new Set();
 
-  const commits =
-    graphqlData?.user?.contributionsCollection?.totalCommitContributions || 0;
+  for (const event of events) {
+    const line = mapEvent(event);
+    if (seen.has(line)) {
+      continue;
+    }
 
-  const hasGraphql = Boolean(graphqlData?.user?.contributionsCollection);
+    seen.add(line);
+    uniqueActivity.push(line);
 
-  const recentActivity = events.length
-    ? events.slice(0, 7).map(mapEvent).join("\n")
+    if (uniqueActivity.length === 5) {
+      break;
+    }
+  }
+
+  const recentActivity = uniqueActivity.length
+    ? uniqueActivity.join("\n")
     : "- Nenhum evento publico recente encontrado.";
 
-  const languageLines = languages.length
-    ? languages.map((item) => `- ${item.name}: ${item.count} repos`).join("\n")
-    : "- Linguagens nao identificadas nos repositorios retornados.";
-
-  const contributionsCell = hasGraphql
-    ? `**${contributions}**`
-    : "N/A (GraphQL token required)";
-
-  const commitsCell = hasGraphql
-    ? `**${commits}**`
-    : "N/A (GraphQL token required)";
-
-  const streakCell = hasGraphql
-    ? `**${streak.current} / ${streak.best} days**`
-    : "N/A (GraphQL token required)";
-
   return [
-    "### Live Telemetry",
-    "",
-    "| Metric | Value |",
-    "|---|---|",
-    `| Public repos | **${user?.public_repos ?? repos.length}** |`,
-    `| Followers / Following | **${user?.followers ?? 0} / ${user?.following ?? 0}** |`,
-    `| Stars received | **${totalStars}** |`,
-    `| Forks received | **${totalForks}** |`,
-    `| Contributions (last year) | ${contributionsCell} |`,
-    `| Commit contributions (last year) | ${commitsCell} |`,
-    `| Streak (current / best) | ${streakCell} |`,
+    "### Live Feed",
     "",
     "#### Last Public Activity",
     recentActivity,
-    "",
-    "#### Language Footprint",
-    languageLines,
     "",
     "> Updated automatically via GitHub Actions using GitHub REST + GraphQL APIs."
   ].join("\n");
@@ -418,16 +389,7 @@ async function main() {
   const contributionDays = collectContributionDays(graphqlData);
   const streak = computeStreak(contributionDays);
 
-  const dynamicBlock = buildDynamicBlock({
-    user: safeUser,
-    repos,
-    events,
-    graphqlData,
-    totalStars,
-    totalForks,
-    languages,
-    streak
-  });
+  const dynamicBlock = buildDynamicBlock({ events });
 
   const readme = await fs.readFile(README_PATH, "utf8");
   if (!readme.includes(START_MARKER) || !readme.includes(END_MARKER)) {

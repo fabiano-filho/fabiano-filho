@@ -21,35 +21,22 @@
   <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/fabiano-filho/fabiano-filho/main/assets/metrics/radar.json" alt="radar"/>
 </p>
 
-<!-- turbo:start -->
-### Live Telemetry
+## SIGNALS
 
-| Metric | Value |
-|---|---|
-| Public repos | **30** |
-| Followers / Following | **29 / 33** |
-| Stars received | **2** |
-| Forks received | **0** |
-| Contributions (last year) | **309** |
-| Commit contributions (last year) | **62** |
-| Streak (current / best) | **4 / 7 days** |
+<p align="center">
+  <img width="49%" src="https://raw.githubusercontent.com/fabiano-filho/fabiano-filho/main/assets/signals/velocity.svg" alt="velocity-signal"/>
+  <img width="49%" src="https://raw.githubusercontent.com/fabiano-filho/fabiano-filho/main/assets/signals/stack.svg" alt="stack-signal"/>
+</p>
+
+<!-- turbo:start -->
+### Live Feed
 
 #### Last Public Activity
-- `2026-02-12` Push em [`fabiano-filho/fabiano-filho`](https://github.com/fabiano-filho/fabiano-filho)
 - `2026-02-12` Push em [`fabiano-filho/fabiano-filho`](https://github.com/fabiano-filho/fabiano-filho)
 - `2026-02-10` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-10` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 - `2026-02-06` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-05` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
-- `2026-02-05` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
-
-#### Language Footprint
-- Python: 9 repos
-- HTML: 3 repos
-- JavaScript: 2 repos
-- TypeScript: 2 repos
-- Kotlin: 1 repos
-- TSQL: 1 repos
 
 > Updated automatically via GitHub Actions using GitHub REST + GraphQL APIs.
 <!-- turbo:end -->
@@ -69,22 +56,6 @@
   <img align="center" alt="pandas" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/>
   <img align="center" alt="sqlserver" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"/>
 </div>
-
-## SIGNALS
-
-<p align="center">
-  <img width="49%" src="https://raw.githubusercontent.com/fabiano-filho/fabiano-filho/main/assets/signals/velocity.svg" alt="velocity-signal"/>
-  <img width="49%" src="https://raw.githubusercontent.com/fabiano-filho/fabiano-filho/main/assets/signals/stack.svg" alt="stack-signal"/>
-</p>
-
-## AUTOMATION ENGINE
-
-This profile is powered by:
-
-- GitHub REST API (`users`, `repos`, `events/public`)
-- GitHub GraphQL API (`contributionsCollection`, `rateLimit`)
-- GitHub Actions (`turbo-readme.yml`) for automatic refresh
-- Shields Endpoint API using JSON files generated inside this repository
 
 ## CONTRIBUTION MATRIX
 
