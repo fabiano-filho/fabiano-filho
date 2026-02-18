@@ -32,11 +32,11 @@
 ### Live Feed
 
 #### Last Public Activity
+- `2026-02-17` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
+- `2026-02-17` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 - `2026-02-16` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-16` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 - `2026-02-12` Push em [`fabiano-filho/fabiano-filho`](https://github.com/fabiano-filho/fabiano-filho)
-- `2026-02-10` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
-- `2026-02-10` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
 
 > Updated automatically via GitHub Actions using GitHub REST + GraphQL APIs.
 <!-- turbo:end -->
@@ -49,19 +49,19 @@
 _Mode: public repos only | Repos analyzed: 30_
 
 <div align="center">
-  <img align="center" alt="HTML" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" title="#1 HTML - 21.6%"/>
-  <img align="center" alt="JavaScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="#2 JavaScript - 18.4%"/>
-  <img align="center" alt="TypeScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" title="#3 TypeScript - 15.8%"/>
-  <img align="center" alt="Python" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="#4 Python - 14.6%"/>
-  <img align="center" alt="CSS" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" title="#5 CSS - 14.0%"/>
-  <img align="center" alt="C" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="#6 C - 7.0%"/>
+  <img align="center" alt="HTML" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" title="#1 HTML - 21.0%"/>
+  <img align="center" alt="JavaScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="#2 JavaScript - 18.8%"/>
+  <img align="center" alt="TypeScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" title="#3 TypeScript - 15.9%"/>
+  <img align="center" alt="Python" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="#4 Python - 14.5%"/>
+  <img align="center" alt="CSS" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" title="#5 CSS - 14.4%"/>
+  <img align="center" alt="C" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="#6 C - 6.9%"/>
   <img align="center" alt="TSQL" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" title="#7 TSQL - 3.8%"/>
   <img align="center" alt="Java" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="#8 Java - 2.8%"/>
   <img align="center" alt="PHP" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" title="#9 PHP - 0.8%"/>
   <img align="center" alt="Vue" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" title="#10 Vue - 0.6%"/>
 </div>
 
-<sub>1) HTML 21.6% | 2) JavaScript 18.4% | 3) TypeScript 15.8% | 4) Python 14.6% | 5) CSS 14.0% | 6) C 7.0% | 7) TSQL 3.8% | 8) Java 2.8% | 9) PHP 0.8% | 10) Vue 0.6%</sub>
+<sub>1) HTML 21.0% | 2) JavaScript 18.8% | 3) TypeScript 15.9% | 4) Python 14.5% | 5) CSS 14.4% | 6) C 6.9% | 7) TSQL 3.8% | 8) Java 2.8% | 9) PHP 0.8% | 10) Vue 0.6%</sub>
 <!-- tech:end -->
 
 ## CONTRIBUTION MATRIX
