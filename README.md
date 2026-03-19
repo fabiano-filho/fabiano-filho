@@ -36,7 +36,6 @@
 - `2026-02-20` MemberEvent em [`Gabstaudt/api-plant`](https://github.com/Gabstaudt/api-plant)
 - `2026-02-17` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 - `2026-02-17` Push em [`fabiano-filho/cronicas-de-algorion-backend`](https://github.com/fabiano-filho/cronicas-de-algorion-backend)
-- `2026-02-16` Push em [`fabiano-filho/cronicas-de-algorion-frontend`](https://github.com/fabiano-filho/cronicas-de-algorion-frontend)
 
 > Updated automatically via GitHub Actions using GitHub REST + GraphQL APIs.
 <!-- turbo:end -->
