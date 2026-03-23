@@ -32,8 +32,7 @@
 ### Live Feed
 
 #### Last Public Activity
-- `2026-02-20` MemberEvent em [`Gabstaudt/plant`](https://github.com/Gabstaudt/plant)
-- `2026-02-20` MemberEvent em [`Gabstaudt/api-plant`](https://github.com/Gabstaudt/api-plant)
+- Nenhum evento publico recente encontrado.
 
 > Updated automatically via GitHub Actions using GitHub REST + GraphQL APIs.
 <!-- turbo:end -->
