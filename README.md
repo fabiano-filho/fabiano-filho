@@ -45,19 +45,19 @@
 _Mode: public repos only | Repos analyzed: 30_
 
 <div align="center">
-  <img align="center" alt="HTML" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" title="#1 HTML - 21.0%"/>
-  <img align="center" alt="JavaScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="#2 JavaScript - 18.8%"/>
-  <img align="center" alt="TypeScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" title="#3 TypeScript - 15.9%"/>
-  <img align="center" alt="Python" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="#4 Python - 14.5%"/>
-  <img align="center" alt="CSS" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" title="#5 CSS - 14.4%"/>
-  <img align="center" alt="C" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="#6 C - 6.9%"/>
-  <img align="center" alt="TSQL" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" title="#7 TSQL - 3.8%"/>
-  <img align="center" alt="Java" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="#8 Java - 2.8%"/>
-  <img align="center" alt="PHP" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" title="#9 PHP - 0.8%"/>
-  <img align="center" alt="Vue" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" title="#10 Vue - 0.6%"/>
+  <img align="center" alt="HTML" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" title="#1 HTML - 25.1%"/>
+  <img align="center" alt="JavaScript" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="#2 JavaScript - 21.8%"/>
+  <img align="center" alt="Python" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="#3 Python - 17.4%"/>
+  <img align="center" alt="CSS" height="34" width="44" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" title="#4 CSS - 17.1%"/>
+  <img align="center" alt="C" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="#5 C - 8.3%"/>
+  <img align="center" alt="TSQL" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" title="#6 TSQL - 4.5%"/>
+  <img align="center" alt="Java" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="#7 Java - 3.3%"/>
+  <img align="center" alt="PHP" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" title="#8 PHP - 1.0%"/>
+  <img align="center" alt="Vue" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" title="#9 Vue - 0.8%"/>
+  <img align="center" alt="Kotlin" height="34" width="44" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" title="#10 Kotlin - 0.4%"/>
 </div>
 
-<sub>1) HTML 21.0% | 2) JavaScript 18.8% | 3) TypeScript 15.9% | 4) Python 14.5% | 5) CSS 14.4% | 6) C 6.9% | 7) TSQL 3.8% | 8) Java 2.8% | 9) PHP 0.8% | 10) Vue 0.6%</sub>
+<sub>1) HTML 25.1% | 2) JavaScript 21.8% | 3) Python 17.4% | 4) CSS 17.1% | 5) C 8.3% | 6) TSQL 4.5% | 7) Java 3.3% | 8) PHP 1.0% | 9) Vue 0.8% | 10) Kotlin 0.4%</sub>
 <!-- tech:end -->
 
 ## CONTRIBUTION MATRIX
