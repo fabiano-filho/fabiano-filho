@@ -32,7 +32,7 @@
 ### Live Feed
 
 #### Last Public Activity
-- `2026-04-28` Star em [`erikvoit/pm-dawn`](https://github.com/erikvoit/pm-dawn)
+- Nenhum evento publico recente encontrado.
 
 > Updated automatically via GitHub Actions using GitHub REST + GraphQL APIs.
 <!-- turbo:end -->
